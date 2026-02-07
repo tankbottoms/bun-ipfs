@@ -1,0 +1,36 @@
+node_modules/
+dist/
+.claude/
+.omc/
+.github-commit-messages
+*.zip
+
+# Environment (contains local node IPs)
+.env
+
+# Generated output
+upload-logs/
+docs/images/
+
+# User content in development
+upload/
+
+# Compiled binaries
+bun-ipfs
+bun-ipfs-linux
+bun-ipfs-macos
+
+# Generated reports and QR codes (when testing locally)
+*-report.json
+*-ipfs-ipns-*.pinned.pdf
+*-ipfs-folder.png
+*-ipfs-zip.png
+*-ipns.png
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp

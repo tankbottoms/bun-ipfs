@@ -1,0 +1,30 @@
+{
+  "name": "bun-ipfs",
+  "version": "1.0.0",
+  "description": "Upload files and folders to IPFS with QR codes, PDF reports, IPNS publishing, and multi-node pinning",
+  "author": "tankbottoms.eth",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "bun-ipfs": "src/index.ts"
+  },
+  "scripts": {
+    "dev": "bun run src/index.ts",
+    "build": "bun build src/index.ts --compile --outfile bun-ipfs",
+    "build:linux": "bun build src/index.ts --compile --target=bun-linux-x64 --outfile bun-ipfs-linux",
+    "build:macos": "bash scripts/build-macos.sh",
+    "test": "bash scripts/test-upload.sh",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@clack/prompts": "^0.9",
+    "@pdf-lib/fontkit": "^1.1.1",
+    "pdf-lib": "^1.17",
+    "qrcode": "^1.5"
+  },
+  "devDependencies": {
+    "@types/qrcode": "^1.5",
+    "bun-types": "latest",
+    "typescript": "^5.0"
+  }
+}
