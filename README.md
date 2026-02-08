@@ -165,6 +165,18 @@ bun-ipfs find attention
 bun-ipfs history
 ```
 
+### Output Example
+
+When you push a folder, you'll see QR codes in the terminal along with the CIDs and URLs:
+
+![IPFS Push Output](docs/screenshot.png)
+
+The output includes:
+- QR codes for both the folder and zip archive (shown in terminal by default)
+- IPFS CIDs and gateway URLs
+- IPNS name for persistent addressing
+- PDF report saved to the current directory
+
 ### Interactive TUI Mode
 
 ```bash
