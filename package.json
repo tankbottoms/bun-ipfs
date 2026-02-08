@@ -11,7 +11,7 @@
   "scripts": {
     "dev": "bun run src/index.ts",
     "build": "bun build src/index.ts --compile --outfile bun-ipfs",
-    "build:linux": "bun build src/index.ts --compile --target=bun-linux-x64 --outfile bun-ipfs-linux",
+    "build:linux": "bun build src/index.ts --compile --target=bun-linux-arm64 --outfile bun-ipfs-linux",
     "build:macos": "bash scripts/build-macos.sh",
     "test": "bash scripts/test-upload.sh",
     "typecheck": "tsc --noEmit"
