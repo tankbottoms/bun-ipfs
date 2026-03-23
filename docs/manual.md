@@ -63,7 +63,7 @@ State and reports are stored separately:
   .env                                    Optional env overrides
   imgcat                                  iTerm2 imgcat (if available)
 
-~/Documents/bun-ipfs/reports/             Reports directory (macOS default)
+~/.local/bun-ipfs/reports/                Reports directory (with --use-global-dir)
   YYYYMMDD-ipfs-ipns-<name>.pinned.pdf    PDF reports
   <name>-report.json                      JSON reports
 ```

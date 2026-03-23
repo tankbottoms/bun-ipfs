@@ -67,8 +67,7 @@ bash scripts/test-upload.sh
   - `YYYYMMDD-ipfs-ipns-<name>.pinned.pdf`
 
 ### Reports (With --use-global-dir)
-- macOS: `~/Documents/bun-ipfs/reports/`
-- Linux: `~/.local/store/bun-ipfs/reports/`
+- `~/.local/bun-ipfs/reports/`
 
 ## Key Changes
 
@@ -93,7 +92,7 @@ bun-ipfs /var/www/html/website
 # Example 3: Centralized reports
 cd /tmp
 bun-ipfs ./data --use-global-dir
-# Reports saved to ~/Documents/bun-ipfs/reports/
+# Reports saved to ~/.local/bun-ipfs/reports/
 
 # Example 4: Quiet mode for scripts
 bun-ipfs ./backup -q --no-qr

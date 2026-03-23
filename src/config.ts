@@ -14,10 +14,7 @@ export const IMGCAT_PATH = join(STATE_DIR, 'imgcat');
 export const STATE_ENV_PATH = join(STATE_DIR, '.env');
 
 // Reports directory: current working directory by default, or global dir if --use-global-dir flag is set
-const isMac = process.platform === 'darwin';
-export const GLOBAL_REPORTS_DIR = isMac
-  ? join(HOME, 'Documents', 'bun-ipfs', 'reports')
-  : join(STATE_DIR, 'reports');
+export const GLOBAL_REPORTS_DIR = join(HOME, '.local', 'bun-ipfs', 'reports');
 
 // Mutable reports dir — set by CLI flag or defaults to CWD
 let _reportsDir = '';

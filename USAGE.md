@@ -14,9 +14,7 @@ The program now works from any directory and saves reports to the current workin
 ### Report Storage
 
 - **Default**: Current working directory (where you run the command)
-- **With `--use-global-dir`**:
-  - macOS: `~/Documents/bun-ipfs/reports/`
-  - Linux: `~/.local/store/bun-ipfs/reports/`
+- **With `--use-global-dir`**: `~/.local/bun-ipfs/reports/`
 
 ### QR Codes
 
@@ -30,7 +28,7 @@ The program now works from any directory and saves reports to the current workin
 ### Development Mode (No Installation)
 
 ```bash
-cd /Users/mark.phillips/Developer/bun-ipfs
+cd ~/Developer/bun-ipfs
 
 # Use directly from project
 bun run dev <path>
@@ -39,7 +37,7 @@ bun run dev <path>
 ### Local Installation (Current User)
 
 ```bash
-cd /Users/mark.phillips/Developer/bun-ipfs
+cd ~/Developer/bun-ipfs
 
 # Build the binary
 bun run build
@@ -59,7 +57,7 @@ source ~/.zshrc  # or source ~/.bashrc
 ### Global Installation (All Users)
 
 ```bash
-cd /Users/mark.phillips/Developer/bun-ipfs
+cd ~/Developer/bun-ipfs
 
 # Build the binary
 bun run build
@@ -75,7 +73,7 @@ bun-ipfs --version
 ### macOS Automated Installation
 
 ```bash
-cd /Users/mark.phillips/Developer/bun-ipfs
+cd ~/Developer/bun-ipfs
 
 # Build and install in one command
 bun run build:macos
@@ -105,13 +103,13 @@ bun-ipfs env
 
 ```bash
 # Test from project directory
-cd /Users/mark.phillips/Developer/bun-ipfs
+cd ~/Developer/bun-ipfs
 bun-ipfs ./upload/attention
-# Reports saved to: /Users/mark.phillips/Developer/bun-ipfs/
+# Reports saved to: ~/Developer/bun-ipfs/
 
 # Test from different directory with absolute path
 cd ~/Documents
-bun-ipfs /Users/mark.phillips/Developer/bun-ipfs/upload/attention
+bun-ipfs ~/Developer/bun-ipfs/upload/attention
 # Reports saved to: ~/Documents/
 
 # Test with relative path
@@ -124,7 +122,7 @@ bun-ipfs ./my-folder --no-qr
 
 # Test with global directory
 bun-ipfs ./my-folder --use-global-dir
-# Reports saved to: ~/Documents/bun-ipfs/reports/
+# Reports saved to: ~/.local/bun-ipfs/reports/
 
 # Test quiet mode
 bun-ipfs ./my-folder -q
@@ -152,7 +150,7 @@ bun-ipfs gateway set https://dweb.link
 ### Integration Test Suite
 
 ```bash
-cd /Users/mark.phillips/Developer/bun-ipfs
+cd ~/Developer/bun-ipfs
 
 # Run the full test suite
 bash scripts/test-upload.sh
@@ -194,8 +192,8 @@ cd /tmp
 bun-ipfs ./temp-data --use-global-dir
 
 # Results:
-# - Creates: temp-data-report.json (in ~/Documents/bun-ipfs/reports/)
-# - Creates: 20260207-ipfs-ipns-temp-data.pinned.pdf (in ~/Documents/bun-ipfs/reports/)
+# - Creates: temp-data-report.json (in ~/.local/bun-ipfs/reports/)
+# - Creates: 20260207-ipfs-ipns-temp-data.pinned.pdf (in ~/.local/bun-ipfs/reports/)
 # - Original data: stays in /tmp/temp-data/
 ```
 
@@ -253,7 +251,7 @@ rm -f *.zip
 rm -rf ~/.local/store/bun-ipfs/
 
 # Remove global reports directory
-rm -rf ~/Documents/bun-ipfs/
+rm -rf ~/.local/bun-ipfs/
 ```
 
 ---
@@ -265,9 +263,9 @@ rm -rf ~/Documents/bun-ipfs/
 On first run, the tool creates the state directory and displays:
 
 ```
-State directory: /Users/mark.phillips/.local/store/bun-ipfs
+State directory: ~/.local/store/bun-ipfs
 Reports will be saved to current directory by default
-Use --use-global-dir to save to: ~/Documents/bun-ipfs/reports/
+Use --use-global-dir to save to: ~/.local/bun-ipfs/reports/
 ```
 
 ### Manual Configuration
@@ -339,7 +337,7 @@ bun-ipfs ./my-folder --use-global-dir
 ls -la $(which bun-ipfs)
 
 # Re-install if needed
-cd /Users/mark.phillips/Developer/bun-ipfs
+cd ~/Developer/bun-ipfs
 bun run build
 sudo cp bun-ipfs /usr/local/bin/
 sudo chmod +x /usr/local/bin/bun-ipfs
@@ -367,7 +365,7 @@ scp user@remote-host:/var/data/important-files-report.json ./
 
 ```bash
 # Build Linux binary locally
-cd /Users/mark.phillips/Developer/bun-ipfs
+cd ~/Developer/bun-ipfs
 bun run build:linux
 
 # Copy to remote host

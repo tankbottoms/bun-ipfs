@@ -144,7 +144,7 @@ bun-ipfs /path/to/paper.pdf
 
 # Push with global reports directory
 bun-ipfs ./docs --use-global-dir
-# Saves to ~/Documents/bun-ipfs/reports/ (macOS) or ~/.local/store/bun-ipfs/reports/ (Linux)
+# Saves to ~/.local/bun-ipfs/reports/
 
 # Push with custom gateway
 bun-ipfs ./docs -g https://dweb.link
@@ -272,8 +272,7 @@ Current Directory (default)           Reports saved here by default
 Use `--use-global-dir` to save reports to a global directory instead:
 
 ```
-~/Documents/bun-ipfs/reports/         Global reports directory (macOS, with --use-global-dir)
-~/.local/store/bun-ipfs/reports/      Global reports directory (Linux, with --use-global-dir)
+~/.local/bun-ipfs/reports/            Global reports directory (with --use-global-dir)
 ```
 
 ### Why Current Directory?

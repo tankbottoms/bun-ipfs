@@ -253,7 +253,7 @@ ${c.cyan} |_____|_|    |_|   |_____/${c.reset}`;
   console.log(`  ${c.bold}${c.yellow}DATA${c.reset}`);
   console.log();
   const stateDir = '~/.local/store/bun-ipfs/';
-  const globalReportsDir = process.platform === 'darwin' ? '~/Documents/bun-ipfs/reports/' : '~/.local/store/bun-ipfs/reports/';
+  const globalReportsDir = '~/.local/bun-ipfs/reports/';
   console.log(`    ${c.dim}State:${c.reset}           ${stateDir}`);
   console.log(`    ${c.dim}Database:${c.reset}        ${stateDir}bun-ipfs.sqlite`);
   console.log(`    ${c.dim}Config:${c.reset}          ${stateDir}bun-ipfs.json`);

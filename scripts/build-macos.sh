@@ -6,6 +6,7 @@ PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
 BIN_NAME="bun-ipfs"
 INSTALL_DIR="/usr/local/bin"
 STATE_DIR="$HOME/.local/store/bun-ipfs"
+REPORTS_DIR="$HOME/.local/bun-ipfs/reports"
 
 echo "Building $BIN_NAME for macOS ARM64..."
 cd "$PROJECT_DIR"
@@ -15,7 +16,8 @@ echo "Installing to $INSTALL_DIR/$BIN_NAME..."
 mv "$BIN_NAME-macos" "$INSTALL_DIR/$BIN_NAME"
 
 echo "Creating state directory..."
-mkdir -p "$STATE_DIR/reports"
+mkdir -p "$STATE_DIR"
+mkdir -p "$REPORTS_DIR"
 
 # Copy imgcat if available (iTerm2 inline images)
 if [ -f "$HOME/.iterm2/imgcat" ]; then
